@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Drop2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--<script src="script.js"></script>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+
+        }
+
+        .color-bar1 {
+            width: 100vw;
+            height: 30px;
+            background-color: #b83846;
+        }
+
+        .color-bar2 {
+            width: 100vw;
+            height: 20px;
+            background-color: #f5ca66;
+        }
+
+        .color-bar3 {
+            width: 100vw;
+            height: 50px;
+            display: flex;
+        }
+
+        .left-bar3 {
+            width: 20%;
+            background-color: #b83846;
+        }
+
+        .right-bar3 {
+            width: 80%;
+            background-color: #5e6669;
+        }
+
+        .dropbtn {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #cecece;
+        }
+
+        table {
+            width: 1000px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="color-bar1"></div>
+    <div class="color-bar2"></div>
+    
+    <div class="d-flex justify-content-center">
+        <img src="Capture1.PNG" class="img-fluid" class="imge-Responsive">
+    </div>
+    
+    <div class="color-bar3">
+        <div class="left-bar3"></div>
+        <div class="right-bar3"></div>
+    </div>
+    <div class="d-flex" style="width: 100vw;">
+        <div class="p-2 shadow p-3 mb-5 bg-white rounded" style="width: 20%; height: 100vh;">
+            <div class="d-flex">
+                <div style="padding-left: 10%;">
+                    <a href="Proflie.html">
+                        <h5>ประวัตินักศึกษา</h5>
+                    </a>
+                    <h5>ยื่นคำร้อง</h5>
+                    <div style="padding-left: 15%;">
+                        <div class="dropdown">
+                            <button class="dropbtn">ประเภทคำร้อง</button>
+                            <div class="dropdown-content">
+                                <a href="U3-Add-Drop1.html">คำร้องเพิ่ม-ถอนรายวิชา</a>
+                                <a href="#">คำร้องลาออก</a>
+                                <a href="#">คำร้องทั่วไป</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="p-2" style="width: 80%;">
+            <div class="d-flex justify-content-center mt-5">
+
+                <div class="d-flex gap-2">
+                    <h1>คำร้องขอเพิ่ม-ถอน รายวิชา</h1>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center ">
+                <div class="d-flex gap-2">
+                    <h4>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h4>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container d-flex  flex-column align-items ">
+                <div class="d-flex gap-2">
+                    <h3><b>รายละเอียดขอเพิ่ม-ถอน รายวิชา</b></h3>
+                </div>
+            </div>
+            <div class=tableSubject>
+                <br>&nbsp;&nbsp;&nbsp;
+                <label for="numberOfSubjectsToAdd">จำนวนวิชาที่ต้องการเพิ่ม (0-10):</label>
+                <input class="btn btn-outline-secondary btn-sm" type="number" id="numberOfSubjectsToAdd"
+                    name="numberOfSubjectsToAdd" min="0" max="10" required>
+                <button class="btn btn-outline-dark btn-sm" type="button"
+                    onclick="generateSubjectForm('addSubjectTableBody')">สร้างตาราง</button>
+                <div class="d-flex justify-content-center">
+                    <form id="addSubjectForm">
+                        <table id="addSubjectTable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>รหัสวิชา</th>
+                                    <th>ชื่อวิชา</th>
+                                    <th>Section</th>
+                                    <th>วัน</th>
+                                    <th>หน่วยกิต</th>
+                                    <th>อาจารย์ผู้สอน</th>
+                                </tr>
+                            </thead>
+                            <tbody id="addSubjectTableBody">
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <form id="deleteSubjectForm">
+                    <br>&nbsp;&nbsp;&nbsp;
+                    <label for="numberOfSubjectsToDelete">จำนวนวิชาที่ต้องการถอน (0-10):</label>
+                    <input class="btn btn-outline-secondary btn-sm" type="number" id="numberOfSubjectsToDelete"
+                        name="numberOfSubjectsToDelete" min="0" max="10" required>
+                    <button class="btn btn-outline-dark btn-sm" type="button"
+                        onclick="generateDeleteSubjectForm()">สร้างตาราง</button>
+                    <div class="d-flex justify-content-center">
+                        <table id="deleteSubjectTable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>รหัสวิชา</th>
+                                    <th>ชื่อวิชา</th>
+                                    <th>Section</th>
+                                    <th>วัน</th>
+                                    <th>หน่วยกิต</th>
+                                    <th>อาจารย์ผู้สอน</th>
+                                </tr>
+                            </thead>
+                            <tbody id="deleteSubjectTableBody">
+                            </tbody>
+                        </table>
+                </form>
+            </div>
+            
+              <div class="d-flex p-4">  <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">เหตุผลที่ขอเพิ่ม-ถอน</label>
+                  <input type="text" class="form-control" id="cause" style="width: 600px; height: 60px; font-size: 14px;"  >
+                </div>
+              </form></div>
+        </div>
+        
+
+        <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-end mr-4">
+                <a href="U3-Add-Drop1.html"><button type="button" class="btn btn-danger ml-4">Back</button></a>
+            </div>
+            <div class="d-flex justify-content-end ml-4">
+                <a href="U3-Add-Drop1.html"><button type="button" class="btn btn-danger mr-4" id="submit">Submit</button></a>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+
+        document.getElementById("cause").value = sessionStorage.getItem('cause');
+
+        function generateSubjectForm(tableBodyId) {
+            var numberOfSubjects = document.getElementById(`numberOfSubjectsToAdd`).value;
+            if(numberOfSubjects >= 10){
+                numberOfSubjects = 10;
+            }
+            const tableBody = document.getElementById(tableBodyId);
+
+            tableBody.innerHTML = '';
+
+            for (let i = 1; i <= numberOfSubjects; i++) {
+                const subjectRow = document.createElement('tr');
+                subjectRow.innerHTML = `
+                <td>${i}</td>
+                <td><input type="text" name="subjectCodeToAdd${i}"  id="subjectCodeToAdd${i}"  required></td>
+                <td><input type="text" name="subjectNameToAdd${i}" id="subjectNameToAdd${i}" required></td>
+                <td><input type="text" name="sectionToAdd${i}" id="sectionToAdd${i}" required></td>
+                <td><input type="text" name="dateToAdd${i}" id="dateToAdd${i}" required></td>
+                <td><input type="text" name="gitToAdd${i}" id="gitToAdd${i}" required></td>
+                <td><input type="text" name="subjectTeacherToAdd${i}" id="subjectTeacherToAdd${i}" required></td>
+            `;
+
+                tableBody.appendChild(subjectRow);
+            }
+
+            console.log(numberOfSubjects);
+        }
+
+        function generateDeleteSubjectForm() {
+            var numberOfSubjects = document.getElementById('numberOfSubjectsToDelete').value;
+            if(numberOfSubjects >= 10){
+                numberOfSubjects = 10;
+            }
+            const tableBody = document.getElementById('deleteSubjectTableBody');
+
+            tableBody.innerHTML = '';
+
+            for (let i = 1; i <= numberOfSubjects; i++) {
+                const subjectRow = document.createElement('tr');
+                subjectRow.innerHTML = `
+              <td>${i}</td>
+              <td><input type="text" name="subjectCodeToDelete${i}" id="subjectCodeToDelete${i}"  required></td>
+              <td><input type="text" name="subjectNameToDelete${i}" id="subjectNameToDelete${i}"  required></td>
+              <td><input type="text" name="sectionToDelete${i}" id="sectionToDelete${i}"  required></td>
+              <td><input type="text" name="dateToDelete${i}" id="dateToDelete${i}"  required></td>
+              <td><input type="text" name="gitToDelete${i}" id="gitToDelete${i}"  required></td>
+              <td><input type="text" name="subjectTeacherToDelete${i}" id="subjectTeacherToDelete${i}" required></td>
+          `;
+
+                tableBody.appendChild(subjectRow);
+            }
+
+            console.log(numberOfSubjects);
+        }
+
+        function collectData(){
+
+            var gstudentFirstname = sessionStorage.getItem('studentFirstname');
+            var gstudentLastname = sessionStorage.getItem('studentLastname');
+            var gstudentId = sessionStorage.getItem('studentId');
+            var gstudentYear = sessionStorage.getItem('studentYear');
+            var gadvisor = sessionStorage.getItem('advisor');
+            var gaddressNumber = sessionStorage.getItem('addressNumber');
+            var gmoo = sessionStorage.getItem('moo');
+            var gtumbol = sessionStorage.getItem('tumbol');
+            var gamphur = sessionStorage.getItem('amphur');
+            var gprovince = sessionStorage.getItem('province');
+            var gpostalcode = sessionStorage.getItem('postalcode');
+            var gphone = sessionStorage.getItem('phone');
+            var gstudyField = sessionStorage.getItem('studyField');
+            var gmobilePhone = sessionStorage.getItem('mobilePhone');
+            var gtitleName = sessionStorage.getItem('titleName');
+            var gcause = sessionStorage.getItem('cause');
+            const date = new Date();
+
+            document.getElementById('cause').value = sessionStorage.getItem('cause');
+
+            console.log(gstudentFirstname, gstudentLastname,gphone,gtitleName,gcause,date);
+
+            const formData = {
+                date: date,
+                title: gtitleName,
+                studentFirstName: gstudentFirstname,
+                studentLastName: gstudentLastname,
+                studentId: gstudentId,
+                studentYear: gstudentYear,
+                studyField: gstudyField,
+                advisor: gadvisor,
+                addressNumber: gaddressNumber,
+                moo: gmoo,
+                tumbol: gtumbol,
+                amphur: gamphur,
+                province: gprovince,
+                postalCode: gpostalcode,
+                mobilePhone: gmobilePhone,
+                phone: gphone,
+                cause: gcause,
+                addSubjectList: [],
+                dropSubjectList: []
+            };
+
+            const numberOfSubjects1 = document.getElementById(`numberOfSubjectsToAdd`).value;
+
+            console.log(numberOfSubjects1);
+
+            for(let i=1;i<=numberOfSubjects1;i++){
+            const subjectCode = document.getElementById(`subjectCodeToAdd${i}`).value;
+            const subjectName = document.getElementById(`subjectNameToAdd${i}`).value;
+            const section = document.getElementById(`sectionToAdd${i}`).value;
+            const date = document.getElementById(`dateToAdd${i}`).value;
+            const git = document.getElementById(`gitToAdd${i}`).value;
+            const check = document.getElementById(`subjectTeacherToAdd${i}`).value;
+          
+            const subject = {
+            subjectCode : subjectCode,
+            subjectName : subjectName,
+            subjectSection : section,
+            subjectDate : date,
+            subjectCredit : git,
+            subjectTeacher : check,
+            subjectTeacherCheck : false,
+            registeration_type : "Register",
+            subjectTeacherApprove : false
+            };
+            
+            formData.addSubjectList.push(subject);
+
+            console.log(subject);
+
+        }
+
+        const numberOfSubjects2 = document.getElementById('numberOfSubjectsToDelete').value;
+
+        console.log(numberOfSubjects2);
+      
+            for(let i=1;i<=numberOfSubjects2;i++){
+            const subjectCode = document.getElementById(`subjectCodeToDelete${i}`).value;
+            const subjectName = document.getElementById(`subjectNameToDelete${i}`).value;
+            const section = document.getElementById(`sectionToDelete${i}`).value;
+            const date = document.getElementById(`dateToDelete${i}`).value;
+            const git = document.getElementById(`gitToDelete${i}`).value;
+            const check = document.getElementById(`subjectTeacherToDelete${i}`).value;
+
+            console.log(subjectCode, subjectName, section, date, git);
+            
+            const subject = {
+            subjectCode : subjectCode,
+            subjectName : subjectName,
+            subjectSection : section,
+            subjectDate : date,
+            subjectCredit : git,
+            subjectTeacher : check,
+            subjectTeacherCheck : false,
+            registeration_type : "Withdraw",
+            subjectTeacherApprove : false
+            };
+
+            formData.dropSubjectList.push(subject);
+
+        }
+
+        const jsonData = JSON.stringify(formData);
+
+        console.log(jsonData);
+
+        sendData(jsonData);
+
+        }
+
+        function sendData(jsonData){
+
+        fetch('http://localhost:8080/api/student/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        })
+        .then(response => response.json())
+        .then(data => {alert("Success");})
+        .catch(error => {alert("Error");});
+
+        }
+
+        const notification = document.getElementById('notification');
+
+        document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault();
+            collectData();
+            alert('ส่งข้อมูลสำเร็จ');
+        });
+
+    </script>
+    </div>
+</body>
+
+</html>

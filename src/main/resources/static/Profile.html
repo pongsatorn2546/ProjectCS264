@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--<script src="script.js"></script>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        .color-bar1 {
+            width: 100vw;
+            height: 30px;
+            background-color: #b83846;
+        }
+
+        .color-bar2 {
+            width: 100vw;
+            height: 20px;
+            background-color: #f5ca66;
+        }
+
+        .color-bar3 {
+            width: 100vw;
+            height: 50px;
+            display: flex;
+        }
+
+        .left-bar3 {
+            width: 20%;
+            background-color: #b83846;
+        }
+
+        .right-bar3 {
+            width: 80%;
+            background-color: #5e6669;
+        }
+
+        .dropbtn {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #cecece;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="color-bar1"></div>
+    <div class="color-bar2"></div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <img src="ธรรมศาสตร์.png" class="img-fluid" class="imge-Responsive">
+    </div>
+    <br>
+    <div class="color-bar3">
+        <div class="left-bar3"></div>
+        <div class="right-bar3"></div>
+    </div>
+
+
+
+    <div class="d-flex" style="width: 100vw;">
+        <div class="p-2 shadow p-3 mb-5 bg-white rounded" style="width: 20%; height: 100vh;">
+            <div class="d-flex">
+                <div style="padding-left: 10%;">
+                    <a href="Proflie.html"><h5>ประวัตินักศึกษา</h5></a>
+                    <h5>ยื่นคำร้อง</h5>
+                    <div style="padding-left: 15%;">
+                        <div class="dropdown">
+                            <button class="dropbtn">ประเภทคำร้อง</button>
+                            <div class="dropdown-content">
+                                <a href="U3-Add-Drop1.html">คำร้องเพิ่ม-ถอนรายวิชา</a>
+                                <a href="#">คำร้องลาออก</a>
+                                <a href="#">คำร้องทั่วไป</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="p-2" style="width: 80%;">
+            <div class="d-flex justify-content-center mt-5">
+
+                <div class="d-flex gap-2">
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center ">
+                <div class="d-flex gap-2">
+                    <h1>ประวัตินักศึกษา</h1>
+                </div>
+            </div>
+            <br>
+            <div class="container d-flex  flex-column  mt-4">
+                <form id="myForm">
+                    <br>
+                    <div class="container d-flex  flex-column align-items mt-10">
+                        <div class="d-flex gap-2">
+                            <h5><b>ข้อมูลส่วนตัว</b></h5>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text "><b>ข้าพเจ้า</b></span>
+                                &nbsp;
+                            </div>
+
+                            <select class="form-select" aria-label="Default select example" style="width: 100px;" id="titleName">
+                                <option required selected>คำนำหน้า</option>
+                                <option value="1">นาย</option>
+                                <option value="2">นาง</option>
+                                <option value="3">นางสาว</option>
+                            </select>
+                            <input required id="studentFirstname" required type="text"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width:300px;">
+                            <input required id="studentLastname" required type="text"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width: 300px;">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id=""><b>เลขทะเบียน</b></span>
+                            </div>
+                            <input  pattern=".{10}" id="studentId" type="text"  class="form-control"
+                            aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><b>วัน/เดือน/ปีเกิด</b></span>
+                            </div>
+                            <input id="birthday" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><b>สัญชาติ</b></span>
+                            </div>
+                            <input  id="nation" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-9">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="height: 37px;"><b>ชั้นปี</b></span>
+                            </div>
+                            <select id="studentYear" class="form-select" aria-label="Small"
+                                style="height: 37px; width: 10px;" required>
+                                <option selected>ชั้นปีที่</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="height: 37px;"><b>สาขาวิชา</b></span>
+                            </div>
+                            <input required id="studyField" class="form-control form-control-sm" style="height: 37px;"
+                                aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                    <div class="container d-flex  flex-column  mt-4">
+                        <div class="d-flex gap-2" bg-dark>
+                            <h5><b>ที่อยู่ที่สามารถติดต่อได้</b></h5>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><b>บ้านเลขที่</b></span>
+                            </div>
+                            <input required id="addressNumber" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><b>หมู่ที่</b></span>
+                            </div>
+                            <input required id="moo" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><b>ตำบล</b></span>
+                            </div>
+                            <input required id="tumbol" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm"><b>อำเภอ</b></span>
+                            </div>
+                            <input required id="amphur" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm"><b>จังหวัด</b></span>
+                            </div>
+                            <input required id="province" class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm"><b>รหัสไปรษณีย์</b></span>
+                            </div>
+                            <input required pattern=".{5}" type="text" id="postalcode"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm"><b>โทรศัพท์มือถือ</b></span>
+                            </div>
+                            <input required pattern=".{10}" type="text" id="mobilePhone"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"
+                                    id="inputGroup-sizing-sm"><b>โทรศัพท์บ้าน(ถ้ามี)</b></span>
+                            </div>
+                            <input pattern=".{10}" type="text" id="phone" class="form-control form-control-sm"
+                                aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm"><b>อาจารย์ที่ปรึกษา</b></span>
+                        </div>
+
+                        <div>
+                            <input required id="advisor" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width: 400px;">
+                        </div>
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm"><b>เหตุผลที่ขอเพิ่ม-ถอน</b></span>
+                        </div>
+
+                        <div>
+                            <input required id="cause" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width: 400px;">
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit">Submit</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("myForm");
+      
+        form.addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the form from actually submitting
+         var studentFirstname= document.getElementById('studentFirstname').value
+         var studentLastname=  document.getElementById('studentLastname').value
+         var studentId= document.getElementById('studentId').value
+         var studentYear= document.getElementById('studentYear').value
+         var advisor= document.getElementById('advisor').value
+         var addressNumber= document.getElementById('addressNumber').value
+         var moo= document.getElementById('moo').value
+         var tumbol= document.getElementById('tumbol').value
+         var amphur= document.getElementById('amphur').value
+         var province= document.getElementById('province').value
+         var postalcode= document.getElementById('postalcode').value
+         var mobilePhone= document.getElementById('mobilePhone').value
+         var birthday= document.getElementById('birthday').value
+         var postalcode= document.getElementById('postalcode').value
+         var phone= document.getElementById('phone').value
+         var studyField= document.getElementById('studyField').value
+         var titleName = document.getElementById('titleName').value
+         var cause = document.getElementById('cause').value
+
+         sessionStorage.setItem('studentFirstname', studentFirstname);
+         sessionStorage.setItem('studentLastname', studentLastname);
+         sessionStorage.setItem('studentId', studentId);
+         sessionStorage.setItem('studentYear', studentYear);
+         sessionStorage.setItem('advisor', advisor);
+         sessionStorage.setItem('addressNumber', addressNumber);
+         sessionStorage.setItem('moo', moo);
+         sessionStorage.setItem('tumbol', tumbol);
+         sessionStorage.setItem('amphur', amphur);
+         sessionStorage.setItem('province', province);
+         sessionStorage.setItem('postalcode', postalcode);
+         sessionStorage.setItem('phone', phone);
+         sessionStorage.setItem('studyField', studyField);
+         sessionStorage.setItem('mobilePhone', mobilePhone);
+         sessionStorage.setItem('titleName', titleName);
+         sessionStorage.setItem('cause', cause);
+         window.location.href = "U3-Add-Drop1.html";
+
+         console.log(studentFirstname, studentLastname, studentId, studentYear, advisor, addressNumber, moo, tumbol, amphur, province, birthday, postalcode, titleName);
+
+        });
+      });</script>
+</body>
+</html>
+
+

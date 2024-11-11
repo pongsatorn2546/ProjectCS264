@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>แบบฟอร์มเข้าสู่ระบบ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Noto Sans Thai', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        h2 {
+            color: #c0062f;
+            font-size: 40px;
+        }
+
+        h3 {
+            color: #e10925;
+            font-size: 40px;
+        }
+
+        .top-bar {
+            /*background-color: #CCFF66; /* เปลี่ยนสีตามที่ต้องการ */
+            height: 150px;
+            /* ความสูงของแถบสี */
+            width: 100%;
+            /* ความกว้างเต็มของหน้าเว็บ */
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: linear-gradient(to right, #ffe27f 0%, #ffab76 100%);
+
+        }
+
+        .container {
+            text-align: center;
+
+            background-image: url('https://campus.campus-star.com/app/uploads/2019/05/pici.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            max-width: 2200px;
+            /* ปรับค่า max-width ตามที่คุณต้องการ */
+            width: 100%;
+            /* ปรับค่า width ตามที่คุณต้องการ */
+            height: 100vh;
+            margin: 0 auto;
+            /* ปรับค่า margin ตามที่คุณต้องการ */
+            background-color: rgba(255, 255, 255, 0.5);
+            /* ปรับค่า alpha เพื่อทำให้โปร่งแสง */
+
+        }
+
+        .login-box {
+
+            background-color: rgba(253, 237, 184, 0.8);
+            /* สีพื้นหลัง ปรับความโปร่งแสง */
+            border-radius: 40px;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 250px auto 0;
+            /* วางกรอบอยู่ตรงกลางและลงมาจากด้านบน 130px */
+        }
+
+        img.top-right {
+            max-width: 130px;
+            max-height: 200px;
+            position: absolute;
+            top: 10px;
+            right: 950px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar" style="text-align:center;">
+        <img src="logomo.png" alt="โลโก้" class="top-right d-flex" style = "margin-right:150px;">
+        <br>
+        <h2>มหาวิทยาลัยธรรมศาสตร์</h2>
+        <h3>Thammasat University</h3>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <form id="myForm">
+                <div class="d-flex justify-content-center mt-3 ">
+                    <div class="d-flex p-2">
+                        <div class="form-group">
+                            <div class="d-flex gap-2">
+                                <h5>Username: </h5>
+                            </div>
+                            <input required type="text" class="form-control" id="username"
+                                style="width: 400px; height: 50px; font-size: 14px; border-radius:200px;"
+                                onchange="invalidDisplyNone()"
+                                >
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-3 ">
+                    <div class="d-flex p-2">
+                        <div class="form-group">
+                            <div class="d-flex gap-2">
+                                <h5>Password: </h5>
+                            </div>
+                            <input required type="password" class="form-control" id="password"
+                                style="width: 400px; height: 50px; font-size: 14px; border-radius:200px ;"
+                                onchange="invalidDisplyNone()" 
+                                >
+                                <!-- An element to toggle between password visibility -->
+                            <input type="checkbox" onclick="showPassword()" style = "margin-top: 20px; margin-right: 10px; font-size: 16px;">Show Password 
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-content-center" id="invalid-text" style="display: none;">
+                    <p style="color: #c0062f;">Incorrect username or password</p>
+                </div>
+                <div class="justify-content-center" id="fail-login-text" style="display: none;">
+                    <p style="color: #c0062f;">Login failed</p>
+                </div>
+                <div class="d-flex justify-content-center mb-3 ">
+                    <div class="d-flex justify-content-end">
+                        <button style="height: 50px; width: 400px; border-radius:250px ;" type="submit"
+                            class="btn btn-danger">LOGIN</button>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+    <script>
+
+        function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("myForm");
+            const url = "http://localhost:8080/api/student/login";
+            const invalidLabel = document.getElementById("invalid-text")
+            const loginFailLabel = document.getElementById("fail-login-text")
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the form from actually submitting
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                sessionStorage.setItem('username', username);
+
+                const formData = {
+                    'username': username,
+                    'password': password
+                };
+
+                const jsonData = JSON.stringify(formData, null, 2);
+                //console.log(jsonData);
+
+                fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: jsonData,
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("Login failed");
+                        }
+                        return response.json();
+                    })
+
+                    .then((data) => {
+                        // Assuming the server responds
+
+                        //loginData = JSON.parse(data);
+                        //console.log(data);
+                        //console.log(typeof data);
+                        //console.log(data["type"]);
+                        //console.log(typeof data["type"]);
+                        console.log(data);
+
+                        if (data) {
+                            if (data["type"] == "student") {
+                                window.location.href = "Profile.html"
+                            } else if (loginData.includes('employee')) {
+                                
+                                sessionStorage.setItem("teacherName", data["displayname_th"])
+                                window.location.href = "U8-Approved-Teacher.html"
+                            } else {
+                                invalidLabel.style.display = 'flex';
+                            }
+                        } else {
+                            invalidLabel.style.display = 'flex';
+                        }
+                    })
+                    .catch((error) => {
+                        loginFailLabel.style.display = 'flex';
+                    });
+            });
+        });
+
+        function invalidDisplyNone(){
+            loginFailLabel.style.display = 'none';
+            invalidLabel.style.display = 'none';
+        }
+
+        function test(name){
+            sessionStorage.setItem("teacherName", name);
+            window.location.href = "U8-Approved-Teacher.html";
+        }
+        
+
+    </script>
+
+
+</body>
+
+</html>

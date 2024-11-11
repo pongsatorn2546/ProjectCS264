@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U8-Approved-Teacher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--<script src="script.js"></script>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+
+        }
+
+        .color-bar1 {
+            width: 100vw;
+            height: 30px;
+            background-color: #b83846;
+        }
+
+        .color-bar2 {
+            width: 100vw;
+            height: 20px;
+            background-color: #f5ca66;
+        }
+
+        .color-bar3 {
+            width: 100vw;
+            height: 50px;
+            display: flex;
+        }
+
+        .left-bar3 {
+            width: 20%;
+            background-color: #b83846;
+        }
+
+        .right-bar3 {
+            width: 80%;
+            background-color: #5e6669;
+        }
+
+        .dropbtn {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #cecece;
+        }
+
+        table {
+            width: 1000px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="color-bar1"></div>
+    <div class="color-bar2"></div>
+    <div class="d-flex justify-content-center">
+        <img src="Capture1.PNG" class="img-fluid" class="imge-Responsive">
+    </div>
+    <div class="color-bar3">
+        <div class="left-bar3"></div>
+        <div class="right-bar3"></div>
+    </div>
+
+
+
+    <div class="d-flex" style="width: 100vw;">
+        <div class="p-2 shadow p-3 mb-10 bg-white rounded" style="width: 20%; height: 100vh;">
+            <div class="d-flex">
+                <div style="padding-left: 10%;">
+                    <a href="U8-Approved-Teacher.html">
+                        <h5>อนุมัติการยื่นคำร้อง</h5>
+                    </a>
+                    <div style="padding-left: 15%;">
+                        <div class="dropdown">
+                            <!--<button class="dropbtn">ประเภทคำร้อง</button>
+                            <div class="dropdown-content">
+                                <a href="U3-Add-Drop1.html">คำร้องเพิ่ม-ถอนรายวิชา</a>
+                                <a href="#">คำร้องลาออก</a>
+                                <a href="#">คำร้องทั่วไป</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2" style="width: 80%;" id="Form-container">
+            <!--  <div class="d-flex justify-content-center mt-5">
+
+                <div class="d-flex gap-2">
+                    <h1>คำร้องขอเพิ่ม-ถอน รายวิชา</h1>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center ">
+                <div class="d-flex gap-2">
+                    <h4>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h4>
+                </div>
+            </div>
+            <br>
+
+
+
+            <div class="d-flex justify-content-end">
+                วันที่:
+                &nbsp;
+                <p>
+                <div class="d-flex justify-end" style="width: 200px;">
+                    <input name="date" id="date" class="form-control" type="date" required />
+                </div>
+            </div>
+            <div class="container d-flex  flex-column  mt-4">
+                <form id="myForm">
+                    <br>
+
+
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text "><b>ข้าพเจ้า</b></span>
+                                &nbsp;
+                            </div>
+
+                            <select class="form-select" aria-label="Default select example" style="width: 100px;">
+                                <option required selected>คำนำหน้า</option>
+                                <option value="1">นาย</option>
+                                <option value="2">นาง</option>
+                                <option value="3">นางสาว</option>
+                            </select>
+                            <input required id="studentFirstname" required type="text"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width:300px;">
+                            <input required id="studentLastname" required type="text"
+                                class="form-control form-control-sm" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width: 300px;">
+                        </div>
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><b>เลขทะเบียน</b></span>
+                        </div>
+                        <div>
+                            <input required pattern=".{10}" id="studentId" type="text" class="form-control"
+                                aria-label="Small" aria-describedby="inputGroup-sizing-sm" style="width: 300px;">
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex gap-4 ">
+                        <div class="input-group input-group-sm mb-9">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="height: 37px;"><b>ชั้นปี</b></span>
+                            </div>
+                            <select id="studentYear" class="form-select" aria-label="Small"
+                                style="height: 37px; width: 10px;" required>
+                                <option selected>ชั้นปีที่</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="height: 37px;"><b>สาขาวิชา</b></span>
+                            </div>
+                            <input required id="studyField" class="form-control form-control-sm" style="height: 37px;"
+                                aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm"><b>อาจารย์ที่ปรึกษา</b></span>
+                        </div>
+
+                        <div>
+                            <input required id="advisor" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" style="width: 400px;">
+                        </div>
+                    </div>
+
+
+
+            </div>
+
+            <div class="container d-flex  flex-column align-items mt-5">
+                <div class="d-flex gap-2">
+                    <h5><b>รายละเอียดขอเพิ่ม-ถอน รายวิชา</b></h5>
+                </div>
+            </div>
+            <div class="container d-flex  flex-column  mt-4">
+                <div class=tableSubject>
+                    <br>&nbsp;&nbsp;&nbsp;
+                    <label for="numberOfSubjectsToAdd">จำนวนวิชาที่ต้องการเพิ่ม :</label>
+                    <div class="d-flex justify-content-center">
+                        <form id="addSubjectForm">
+                            <table id="addSubjectTable">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>รหัสวิชา</th>
+                                        <th>ชื่อวิชา</th>
+                                        <th>Section</th>
+                                        <th>วัน</th>
+                                        <th>หน่วยกิต</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="addSubjectTableBody">
+                                    
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <form id="deleteSubjectForm">
+                        <br>&nbsp;&nbsp;&nbsp;
+                        <label for="numberOfSubjectsToDelete">จำนวนวิชาที่ต้องการถอน :</label>
+                        <div class="d-flex justify-content-center">
+                            <table id="deleteSubjectTable">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>รหัสวิชา</th>
+                                        <th>ชื่อวิชา</th>
+                                        <th>Section</th>
+                                        <th>วัน</th>
+                                        <th>หน่วยกิต</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="deleteSubjectTableBody">
+                                    
+                                </tbody>
+                            </table>
+                    </form>
+                </div>
+
+                <div class="d-flex p-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">เหตุผลที่ขอเพิ่ม-ถอน</label>
+                            <input type="text" class="form-control" id="cause"
+                                style="width: 600px; height: 60px; font-size: 14px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row">
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="btn btn-success mr-5 ml-5">APPROVED</button>
+                </div>
+
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="btn btn-danger ">NOT APPROVED</button>
+                </div>
+            </div>
+            <br>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%; height: 20%;"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br> -->
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let subjectCode = [];
+
+        function getStudentList() {
+            let teacherName = sessionStorage.getItem("teacherName");
+            return new Promise((resolve, reject) => {
+                fetch(`http://localhost:8080/api/teacher/tget?teacher=${teacherName}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            addNoneDataLabel();
+                            throw new Error("Failed to get student");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Assuming the structure is List<Student>
+                        if (!Array.isArray(data) || data.length === 0) {
+                            throw new Error("Invalid data structure");
+                        }
+
+                        // Map the student information
+                        const studentAllData = data.map(studentInfomation => ({
+                            date: studentInfomation.date,
+                            title: studentInfomation.title,
+                            studentFirstName: studentInfomation.studentFirstName,
+                            studentLastName: studentInfomation.studentLastName,
+                            studentId: studentInfomation.studentId,
+                            email: studentInfomation.email,
+                            studentYear: studentInfomation.studentYear,
+                            studyField: studentInfomation.studyField,
+                            advisor: studentInfomation.advisor,
+                            addressNumber: studentInfomation.addressNumber,
+                            moo: studentInfomation.moo,
+                            tumbol: studentInfomation.tumbol,
+                            amphur: studentInfomation.amphur,
+                            province: studentInfomation.province,
+                            postalCode: studentInfomation.postalCode,
+                            mobilePhone: studentInfomation.mobilePhone,
+                            phone: studentInfomation.phone,
+                            cause: studentInfomation.cause,
+                            addSubjectList: studentInfomation.addSubjectList,
+                            dropSubjectList: studentInfomation.dropSubjectList
+                        }));
+                        console.log(studentAllData);
+                        resolve(studentAllData);
+                    })
+                    .catch(error => {
+                        console.log("Failed to get student: " + error.message);
+                        reject(error);
+                    });
+            });
+        }
+
+        function createForm() {
+            // Assuming you have a Form-container element in your HTML
+            const formContainer = document.getElementById("Form-container");
+
+            // Calling getStudentList and handling the asynchronous result
+            getStudentList().then(studentAllData => {
+
+                // Loop through each student's data
+                for (let i = 0; i < studentAllData.length; i++) {
+                    const formDiv = document.createElement("div");
+                    formDiv.className = `d-flex justify-content-center`;
+                    formDiv.id = `form${i}`;
+                    formDiv.innerHTML = ` 
+                        <div class="p-2" style="width: 80%;">
+                            <div class="d-flex justify-content-center mt-5">
+
+                                <div class="d-flex gap-2">
+                                    <h1>คำร้องขอเพิ่ม-ถอน รายวิชา</h1>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ">
+                                <div class="d-flex gap-2">
+                                    <h4>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h4>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="d-flex justify-content-end">
+                                วันที่:
+                                &nbsp;
+                                <p>
+                                <div class="d-flex justify-end" style="width: 200px;">
+                                    <input name="date" id="form${i}date" class="form-control" required />
+                                </div>
+                            </div>
+
+                            <!-- Form -->
+
+                            <div class="container d-flex  flex-column  mt-4">
+                                <form id="myForm">
+                                    <br>
+
+
+                                    <div class="d-flex gap-4 ">
+                                        <div class="input-group input-group-sm mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text "><b>ข้าพเจ้า</b></span>
+                                                &nbsp;
+                                            </div>
+
+                                            <select class="form-select" aria-label="Default select example" style="width: 100px;" id="form${i}title">
+                                                <option required selected>คำนำหน้า</option>
+                                                <option value="1">นาย</option>
+                                                <option value="2">นาง</option>
+                                                <option value="3">นางสาว</option>
+                                            </select>
+                                            <input required id="form${i}studentFirstname" required type="text"
+                                                class="form-control form-control-sm" aria-label="Small"
+                                                aria-describedby="inputGroup-sizing-sm" style="width:300px;">
+                                            <input required id="form${i}studentLastname" required type="text"
+                                                class="form-control form-control-sm mt-2" aria-label="Small"
+                                                aria-describedby="inputGroup-sizing-sm" style="width: 300px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group input-group-sm mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><b>เลขทะเบียน</b></span>
+                                        </div>
+                                        <div>
+                                            <input required pattern=".{10}" id="form${i}studentId" type="text" class="form-control"
+                                                aria-label="Small" aria-describedby="inputGroup-sizing-sm" style="width: 300px;">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex gap-4 ">
+                                        <div class="input-group input-group-sm mb-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" style="height: 37px;"><b>ชั้นปี</b></span>
+                                            </div>
+                                            <select id="form${i}studentYear" class="form-select" aria-label="Small"
+                                                style="height: 37px; width: 10px;" required>
+                                                <option selected>ชั้นปีที่</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group input-group-sm mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" style="height: 37px;"><b>สาขาวิชา</b></span>
+                                            </div>
+                                            <input required id="form${i}studyField" class="form-control form-control-sm" style="height: 37px;"
+                                                aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroup-sizing-sm"><b>อาจารย์ที่ปรึกษา</b></span>
+                                        </div>
+
+                                        <div>
+                                            <input required id="form${i}advisor" class="form-control" aria-label="Small"
+                                                aria-describedby="inputGroup-sizing-sm" style="width: 400px;">
+                                        </div>
+                                    </div>
+
+                            <!-- Add/Drop Subject -->
+
+                            </div>
+
+                            <div class="container d-flex  flex-column align-items mt-5">
+                                <div class="d-flex gap-2">
+                                    <h5><b>รายละเอียดขอเพิ่ม-ถอน รายวิชา</b></h5>
+                                </div>
+                            </div>
+                            <div class="container d-flex  flex-column  mt-4">
+                                <div class=tableSubject>
+                                    <br>&nbsp;&nbsp;&nbsp;
+                                    <label for="numberOfSubjectsToAdd">จำนวนวิชาที่ต้องการเพิ่ม :</label>
+                                    <div class="d-flex justify-content-center">
+                                        <form id="addSubjectForm">
+                                            <table id="addSubjectTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>รหัสวิชา</th>
+                                                        <th>ชื่อวิชา</th>
+                                                        <th>Section</th>
+                                                        <th>วัน</th>
+                                                        <th>หน่วยกิต</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="addSubjectTableBody">
+                                                    <!-- add table by js -->
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    <form id="deleteSubjectForm">
+                                        <br>&nbsp;&nbsp;&nbsp;
+                                        <label for="numberOfSubjectsToDelete">จำนวนวิชาที่ต้องการถอน :</label>
+                                        <div class="d-flex justify-content-center">
+                                            <table id="deleteSubjectTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>รหัสวิชา</th>
+                                                        <th>ชื่อวิชา</th>
+                                                        <th>Section</th>
+                                                        <th>วัน</th>
+                                                        <th>หน่วยกิต</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="deleteSubjectTableBody">
+                                                    <!-- add table by js -->
+                                                </tbody>
+                                            </table>
+                                    </form>
+                                </div>
+
+                                <div class="d-flex p-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">เหตุผลที่ขอเพิ่ม-ถอน</label>
+                                            <input type="text" class="form-control" id="form${i}cause"
+                                                style="width: 600px; height: 60px; font-size: 14px;">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Approve and cause -->
+
+                            <div class="d-flex flex-row">
+                                <div class="d-flex justify-content-end ">
+                                    <button type="button" class="btn btn-success mr-5 ml-5 " id="form${i}approved">APPROVED</button>
+                                </div>
+
+                                <div class="d-flex justify-content-end ">
+                                    <button type="button" class="btn btn-danger " id="form${i}denied">NOT APPROVED</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%; height: 20%;"
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <br> 
+                    `;
+
+                    // Create and append the "Add" table
+                    const addTable = createTable(studentAllData[i].addSubjectList, i, "add");
+                    formDiv.querySelector("#addSubjectTable").appendChild(addTable);
+
+                    // Create and append the "Drop" table
+                    const dropTable = createTable(studentAllData[i].dropSubjectList, i, "drop");
+                    formDiv.querySelector("#deleteSubjectTable").appendChild(dropTable);
+
+                    // Set values for form fields
+                    let data = studentAllData[i].date;
+                    let title = studentAllData[i].title;
+                    let studentFirstName = studentAllData[i].studentFirstName;
+                    let studentLastName = studentAllData[i].studentLastName;
+                    let studentId = studentAllData[i].studentId;
+                    let studentYear = studentAllData[i].studentYear;
+                    let studyField = studentAllData[i].studyField;
+                    let advisor = studentAllData[i].advisor;
+                    let addressNumber = studentAllData[i].addressNumber;
+                    let moo = studentAllData[i].moo;
+                    let tumbol = studentAllData[i].tumbol;
+                    let amphur = studentAllData[i].amphur;
+                    let province = studentAllData[i].province;
+                    let postalCode = studentAllData[i].postalCode;
+                    let mobilePhone = studentAllData[i].mobilePhone;
+                    let phone = studentAllData[i].phone;
+                    let cause = studentAllData[i].cause;
+                    let addSubjectList = studentAllData[i].addSubjectList;
+                    let dropSubjectList = studentAllData[i].dropSubjectList;
+                    
+                    // Set value to input field
+                    formDiv.querySelector(`#form${i}date`).value = data;
+                    formDiv.querySelector(`#form${i}title`).value = title;
+                    formDiv.querySelector(`#form${i}studentFirstname`).value = studentFirstName;
+                    formDiv.querySelector(`#form${i}studentLastname`).value = studentLastName;
+                    formDiv.querySelector(`#form${i}studentId`).value = studentId;
+                    formDiv.querySelector(`#form${i}studentYear`).value = studentYear;
+                    formDiv.querySelector(`#form${i}studyField`).value = studyField;
+                    formDiv.querySelector(`#form${i}advisor`).value = advisor;
+                    formDiv.querySelector(`#form${i}cause`).value = cause;
+
+                    let datas = {
+                        date: data,
+                        title: title,
+                        studentFirstName: studentFirstName,
+                        studentLastName: studentLastName,
+                        studentId: studentId,
+                        studentYear: studentYear,
+                        studyField: studyField,
+                        advisor: advisor,
+                        addressNumber: addressNumber,
+                        moo: moo,
+                        tumbol: tumbol,
+                        amphur: amphur,
+                        province: province,
+                        postalCode: postalCode,
+                        mobilePhone: mobilePhone,
+                        phone: phone,
+                        cause: cause,
+                        addSubjectList: addSubjectList,
+                        dropSubjectList: dropSubjectList
+                    };
+                    let jsonData = JSON.stringify(datas, null, 2);
+                    console.log(jsonData);
+
+                    // Add event listeners for buttons
+                    const approvedBtn = formDiv.querySelector(`#form${i}approved`);
+                    const deniedBtn = formDiv.querySelector(`#form${i}denied`);
+
+
+                    if (approvedBtn) {
+                        approvedBtn.addEventListener("click", function () {
+                            fetch(`http://localhost:8080/api/teacher/tcheck?check=${true}&subjectCode=${subjectCode}`, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: jsonData
+                            })
+                                .then((response) => {
+                                    if (!response.ok) {
+                                        throw new Error("Login failed");
+                                    }
+                                    formContainer.removeChild(formDiv);
+                                    subjectCode = [];
+                                    createForm();
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    // Handle the response data if needed
+                                    console.log(data);
+                                })
+                                .catch(error => {
+                                    alert("Error" + error);
+                                });
+                        });
+                    }
+
+                    if (deniedBtn) {
+                        deniedBtn.addEventListener("click", function () {
+                            fetch(`http://localhost:8080/api/teacher/tcheck?check=${false}&subjectCode=${subjectCode}`, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: jsonData
+                            })
+                                .then((response) => {
+                                    if (!response.ok) {
+                                        throw new Error("Login failed");
+                                    }
+                                    formContainer.removeChild(formDiv);
+                                    subjectCode = [];
+                                    createForm();
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    // Handle the response data if needed
+                                    console.log(data);
+                                })
+                                .catch(error => {
+                                    alert("Error" + error);
+                                });
+                        });
+                    }
+
+                    formContainer.appendChild(formDiv);
+                }
+            });
+        }
+
+        // Function to create a table based on the subjectList
+        function createTable(subjectList, formIndex, type) {
+            // Create the table body
+            const tbody = document.createElement("tbody");
+            tbody.id = `form${formIndex}-${type}`;
+            for (let j = 0; j < subjectList.length; j++) {
+                const rowData = subjectList[j];
+                subjectCode.push(rowData.subjectCode);
+                const tr = document.createElement("tr");
+                const cellValues = [j + 1, rowData.subjectCode, rowData.subjectName, rowData.subjectSection, rowData.subjectDate, rowData.subjectCredit];
+
+                // Create and append cells
+                for (const cellValue of cellValues) {
+                    const td = document.createElement("td");
+                    td.textContent = cellValue;
+                    tr.appendChild(td);
+                }
+
+                tbody.appendChild(tr);
+            }
+
+            return tbody;
+        }
+        function addNoneDataLabel() {
+            const formDiv = `
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="d-flex gap-2">
+                        <h1>ไม่พบคำร้องในระบบ</h1>
+                    </div>
+                </div>
+                <br>
+            `;
+            const formContainer = document.getElementById("Form-container");
+            formContainer.innerHTML = formDiv; // Use innerHTML to set the content
+        }
+        
+        createForm()
+
+        // Test
+        function test(name) {
+            sessionStorage.setItem('teacherName', name)
+        }
+    </script>
+</body>
+
+</html>
