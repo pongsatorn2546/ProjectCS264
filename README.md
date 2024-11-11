@@ -32,8 +32,8 @@
 //เมื่อ login เป็นอาจารย์ <br>
    1.กด APPROVED หรือ NOT APPROVED
 
-## นายพงษ์ศธร ศรีพลายได้รับบทบาทการทำงานในฐานะ Frontend Developer
-# Skill
+# นายพงษ์ศธร ศรีพลายได้รับบทบาทการทำงานในฐานะ Frontend Developer
+ Skill
   -HTML        -> จัดการโครงสร้างเว็ป
   -CSS         -> ตกแต่งหน้าเว็ป
   -Javascript  -> ตอบโต้กับผู้ใช้เว็ป
